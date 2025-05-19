@@ -220,7 +220,7 @@ body {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 1em;
+    padding: 0;
   }
 
   .sidebar {
@@ -232,30 +232,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1em 0;
   }
 
-  .main-content {
-    margin-left: 0;
-    padding: 1em;
-  }
-
-  .slideshow {
-    height: 40vh;
-    margin-top: 1em;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr); /* 兩欄圖片 */
+  .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1em;
   }
 
   .nav a {
-    font-size: 1.1em;
-    margin: 0.6em 0;
+    font-size: 1em;
+    margin: 0.5em 1em;
+  }
+
+  .logo {
+    max-width: 150px;
+    margin: 0 auto 1em;
   }
 
   .sidebar-image {
     margin-top: 1em;
     padding: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1em;
   }
 }

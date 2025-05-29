@@ -355,22 +355,4 @@ img {
   height: auto;
   display: block;
 }
-.intro, .about-text {
-  text-align: justify;      /* 兩端對齊 */
-  text-justify: inter-ideograph; /* 中文用這個更自然 */
-}
-
-@media (max-width: 700px) {
-  .intro, .about-text {
-    text-align: justify;
-    text-justify: inter-ideograph;
-    padding-left: 6vw;
-    padding-right: 6vw;
-    /* 如果需要再緊湊些可改 4vw */
-  }
-}
-.intro h1, .about-text h1 {
-  text-align: left;
-  margin-left: 0;
-}
 

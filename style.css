@@ -352,9 +352,8 @@ img {
   display: block;
 }
 
-/* --- 點擊放大燈箱 --- */
 .img-lightbox {
-  display: none; /* 預設隱藏 */
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0; top: 0; width: 100vw; height: 100vh;
@@ -362,9 +361,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-.img-lightbox.show {
-  display: flex;
-}
+.img-lightbox.show { display: flex; }
 .img-lightbox-content {
   max-width: 90vw;
   max-height: 90vh;
@@ -374,12 +371,17 @@ img {
 }
 .close-lightbox {
   position: absolute;
-  top: 28px;
-  right: 50px;
-  color: #fff;
-  font-size: 2.7em;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10000;
-  user-select: none;
+  top: 28px; right: 32px;
+  color: #fff; font-size: 2.4em; font-weight: bold; cursor: pointer;
+  z-index: 10000; user-select: none;
+}
+@media (max-width: 600px) {
+  .img-lightbox-content {
+    max-width: 98vw;
+    max-height: 68vh;
+    border-radius: 7px;
+  }
+  .close-lightbox {
+    top: 18px; right: 10px; font-size: 2em;
+  }
 }

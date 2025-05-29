@@ -466,3 +466,29 @@ img {
   }
 }
 
+@media (max-width: 600px) {
+  .compare-slideshow,
+  .gallery-slideshow {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+  .compare-slide,
+  .gallery-img {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    max-height: 60vw !important;  /* 可依你需求調整高度比例 */
+    display: block !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+  }
+}

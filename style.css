@@ -354,34 +354,41 @@ img {
 
 .img-lightbox {
   display: none;
-  position: fixed;
-  z-index: 9999;
+  position: fixed !important;
+  z-index: 99999;
   left: 0; top: 0; width: 100vw; height: 100vh;
   background: rgba(0,0,0,0.78);
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
-.img-lightbox.show { display: flex; }
+
+.img-lightbox.show { display: flex !important; }
+
 .img-lightbox-content {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 12px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.28);
+  max-width: 95vw;
+  max-height: 85vh;
+  border-radius: 14px;
   background: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.28);
+  object-fit: contain;
 }
+
 .close-lightbox {
   position: absolute;
-  top: 28px; right: 32px;
+  top: 22px; right: 16px;
   color: #fff; font-size: 2.4em; font-weight: bold; cursor: pointer;
   z-index: 10000; user-select: none;
+  background: none;
+  border: none;
 }
 @media (max-width: 600px) {
   .img-lightbox-content {
-    max-width: 98vw;
-    max-height: 68vh;
+    max-width: 98vw !important;
+    max-height: 70vh !important;
     border-radius: 7px;
   }
   .close-lightbox {
-    top: 18px; right: 10px; font-size: 2em;
+    top: 8px; right: 8px; font-size: 2em;
   }
 }

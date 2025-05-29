@@ -161,7 +161,7 @@ img, video {
   transition: background-color 0.3s;
 }
 .prev:hover, .next:hover {
-  background-color: #FFF;
+  background-color: transparent;
   color: #FFA645;
 }
 
@@ -337,11 +337,11 @@ img, video {
     width: 95vw !important;
     max-width: 95vw !important;
     height: auto !important;
-    max-height: 65vw !important;
+    max-height: 115vw !important;
     margin: 0 auto;
     display: block !important;
     object-fit: contain !important;
-    background: #fff;
+    background: transparent;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(80,80,80,0.10);
   }

@@ -404,3 +404,31 @@ img, video {
   }
   .about-text { width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; }
 }
+@media (max-width: 768px) {
+  .container, .main-content, .intro, .white-bg, .service-grid, section, article {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    border-radius: 0 !important; /* 手機不建議用大圓角 */
+  }
+  /* 強制所有圖片、子元素不超出 */
+  img, video, .slide, .gallery-img, .compare-slide {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain !important;
+  }
+  /* 解決卡角問題，把 border-radius 移除 */
+  .intro, .white-bg, .service-item, .gallery-slideshow, .compare-slideshow {
+    border-radius: 0 !important;
+  }
+  /* 左右 padding 可以視覺上留點空間（如有需要） */
+  .intro, .about-text, .about-flex {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
+}

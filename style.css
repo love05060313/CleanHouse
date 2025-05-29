@@ -394,8 +394,7 @@ img {
 }
 /* 針對手機對比照區塊（gallery/compare）圖片放大 */
 @media (max-width: 768px) {
-  .gallery-slideshow,
-  .compare-slideshow {
+  .gallery-slideshow, .compare-slideshow {
     padding: 0.5em 0 !important;
     width: 100vw !important;
     min-width: 0 !important;
@@ -415,18 +414,17 @@ img {
     padding: 0 !important;
     margin: 0 auto !important;
     overflow: visible !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background: transparent !important;
     box-shadow: none !important;
   }
-  .gallery-img,
-  .compare-slide {
+  .gallery-img, .compare-slide {
     width: 95vw !important;
     max-width: 95vw !important;
     height: auto !important;
-    max-height: 55vw !important;
+    max-height: 65vw !important;
     border-radius: 8px;
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(80,80,80,0.10);

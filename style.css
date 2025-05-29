@@ -221,11 +221,39 @@ body {
 /* ===== 手機 RWD 優化 ===== */
 @media (max-width: 768px) {
   .container { flex-direction: column; padding: 0; gap: 0.5em; }
-  .sidebar { position: static; width: 100vw; height: auto; border-radius: 0;
-    box-shadow: none; z-index: 10; padding: 1em 0 0.5em 0;}
-  .logo { max-width: 90vw; margin-bottom: 0.7em; }
+  .sidebar {
+    position: static;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 10;
+    padding: 1em 0 0.5em 0;
+    margin: 0;
+    background: #FCFCFC;
+    overflow: hidden;
+  }
+  .logo {
+    max-width: 92vw;
+    margin: 0 auto 0.7em auto;
+    display: block;
+  }
   .sidebar-image img { max-width: 70vw; height: auto; margin: 0 auto; }
-  .main-content { margin-left: 0; padding: 0.5em 0.2em; }
+  .main-content {
+    margin-left: 0;
+    padding: 0.5em 0.2em;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+    img, video {
+    max-width: 100vw !important;
+    height: auto;
+    display: block;
+  }
   .slideshow { height: 32vw; min-height: 180px; max-height: 210px; }
   .slide, .slide.active { width: 100vw !important; max-width: 100vw !important; height: 32vw; min-height: 180px; max-height: 210px; object-fit: cover; border-radius: 10px; }
   .indicators { bottom: 4px; gap: 6px; }

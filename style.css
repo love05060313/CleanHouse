@@ -164,6 +164,13 @@ img, video {
   background-color: #FFA645;
   color: #fff;
 }
+@media (hover: none) and (pointer: coarse) {
+  .prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.8) !important;  /* 回到原本背景 */
+    color: #2C3E50 !important; /* 回到未 hover 時顏色 */
+  }
+}
+
 .prev { left: 10px; }
 .next { right: 10px; }
 .indicators {

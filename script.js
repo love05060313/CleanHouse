@@ -96,3 +96,31 @@ document.querySelector('#gallerySlideshow .next').onclick = () => {
   galleryStart = (galleryStart + showCount) % imgs.length;
   renderGallerySlides();
 };
+// 點擊 .gallery-img 或 .compare-slide 觸發放大
+document.addEventListener("DOMContentLoaded", function() {
+  function openLightbox(src) {
+    var lightbox = document.getElementById('imgLightbox');
+    var lightboxImg = document.getElementById('imgLightboxImg');
+    lightboxImg.src = src;
+    lightbox.classList.add('show');
+  }
+  function closeLightbox() {
+    document.getElementById('imgLightbox').classList.remove('show');
+  }
+
+  // 代理監聽所有圖片（頁面動態產生也會有用）
+  document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('gallery-img') || e.target.classList.contains('compare-slide')) {
+      openLightbox(e.target.src);
+    }
+  });
+  document.querySelector('.close-lightbox').onclick = closeLightbox;
+  document.getElementById('imgLightbox').onclick = function(e) {
+    // 只點到背景才關閉
+    if (e.target === this) closeLightbox();
+  }
+  // Esc 鍵也可關閉
+  document.addEventListener('keydown', function(e){
+    if (e.key === "Escape") closeLightbox();
+  });
+});

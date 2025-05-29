@@ -352,3 +352,34 @@ img {
   display: block;
 }
 
+/* --- 點擊放大燈箱 --- */
+.img-lightbox {
+  display: none; /* 預設隱藏 */
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.78);
+  align-items: center;
+  justify-content: center;
+}
+.img-lightbox.show {
+  display: flex;
+}
+.img-lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.28);
+  background: #fff;
+}
+.close-lightbox {
+  position: absolute;
+  top: 28px;
+  right: 50px;
+  color: #fff;
+  font-size: 2.7em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+}

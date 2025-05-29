@@ -333,3 +333,17 @@ body {
     margin: 0;
   }
 }
+@media (max-width: 900px) {
+  .about-image img {
+    width: 100%;
+    max-width: 330px; /* 可依你需求調整最大寬度 */
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+    box-sizing: border-box;
+  }
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}

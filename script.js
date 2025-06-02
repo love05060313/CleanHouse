@@ -22,7 +22,7 @@ document.querySelector('.next').addEventListener('click', () => {
 setInterval(() => {
   currentIndex = (currentIndex + 1) % slides.length;
   showSlide(currentIndex);
-}, 3000);
+}, 5000);
 const dots = document.querySelectorAll('.dot');
 
 dots.forEach(dot => {
@@ -45,7 +45,7 @@ const gallerySets = [
     "images/after1.jpg", "images/after2.jpg", "images/after3.jpg"
   ],
   [ // 清洗陽台
-    "images/after1.jpg", "images/after2.jpg", "images/after3.jpg"
+    "images/before1.jpg", "images/after2.jpg", "images/after3.jpg"
   ],
   [ // 清洗客廳
     "images/after1.jpg", "images/after2.jpg", "images/after3.jpg"
@@ -99,28 +99,34 @@ document.querySelector('#gallerySlideshow .next').onclick = () => {
 // 點擊 .gallery-img 或 .compare-slide 觸發放大
 document.addEventListener("DOMContentLoaded", function() {
   function openLightbox(src) {
-    var lightbox = document.getElementById('imgLightbox');
-    var lightboxImg = document.getElementById('imgLightboxImg');
+    const lightbox = document.getElementById('imgLightbox');
+    const lightboxImg = document.getElementById('imgLightboxImg');
     lightboxImg.src = src;
     lightbox.classList.add('show');
   }
+
   function closeLightbox() {
     document.getElementById('imgLightbox').classList.remove('show');
   }
 
-  // 代理監聽所有圖片（頁面動態產生也會有用）
   document.body.addEventListener('click', function(e) {
-    if (e.target.classList.contains('gallery-img') || e.target.classList.contains('compare-slide')) {
+    if (
+      e.target.classList.contains('gallery-img') ||
+      e.target.classList.contains('compare-slide') ||
+      e.target.classList.contains('slide')
+    ) {
       openLightbox(e.target.src);
     }
   });
+
   document.querySelector('.close-lightbox').onclick = closeLightbox;
+
   document.getElementById('imgLightbox').onclick = function(e) {
-    // 只點到背景才關閉
     if (e.target === this) closeLightbox();
   }
-  // Esc 鍵也可關閉
-  document.addEventListener('keydown', function(e){
-    if (e.key === "Escape") closeLightbox();
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
   });
 });
+
